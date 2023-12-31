@@ -1,0 +1,151 @@
+/*
+ * style.css
+ * Style sheet for the website
+ * Stephan Gahima
+*/
+
+
+/*@import url("/static/css/color-palette.css");*/
+
+
+:root {
+  /* Size */
+  --page-width: 1000px;
+  --page-max-height: 800px;
+  --footer-max-height: 100px;
+  --percent-height: 90%;
+  --deg: 180deg;
+
+  /* Colors */
+  --bg-color: #3d3c41;
+  --bc-color-page-content: #1c1b22;
+  --bg-color-footer: #2c2b32;
+  --bg-color-hover: #213741;
+  --bg-color-key-concept: #3b3a41;
+
+  --txt-color-hover: #2f2f2f;
+  --txt-color: #f8f9fa;
+  --txt-title-color: #00ddff;
+  --int-link-color: #f368ec;
+  --ext-link-color: #4daafc;
+  --download-link-color: #46d429;
+
+  --font-sz-title: 1.2em;
+  --font-sz-txt: 1em;
+
+  --padding: 10px;
+  --margin: 10px;
+}
+
+body {
+  width: var(--page-width);
+  max-height: var(--page-max-height);
+  background-color: var(--bg-color);
+  margin: auto;
+  overflow: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--font-sz-txt);
+  color: var(--txt-color);
+}
+
+footer {
+  height: 5vh;
+  max-height: var(--footer-max-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: calc(2 * var(--padding));
+  padding-bottom: var(--padding);
+  background-image: linear-gradient(var(--deg), var(--bg-color-footer), var(--bg-color));
+}
+
+small {
+  margin: calc(.25 * var(--margin));
+}
+
+th {
+  text-align: center;
+  font-size: var(--font-sz-title);
+}
+
+.page-container {
+  height: 90vh;
+  max-height: calc(var(--page-max-height) - var(--footer-max-height));
+  display: flex;
+  padding-top: var(--padding);
+  padding-right: var(--padding);
+  background-color: var(--bc-color-page-content);
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+}
+
+.content {
+  flex: 5;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding); 
+}
+
+.section {
+  padding-top: var(--padding);
+  padding-left: var(--padding);
+}
+
+.section-title
+{
+  color: var(--txt-title-color);
+}
+
+.key-concepts {
+  background-color: var(--bg-color-key-concept);
+  padding-top: var(--padding);
+  padding-left: var(--padding);
+  padding-bottom: calc(.5 * var(--padding));
+  border: 1px solid var(--txt-title-color);
+  text-align: left;
+  border-radius: 5px;
+}
+
+.key-concepts:hover {
+  background-color: var(--bg-color-hover);
+}
+
+.ext-link
+{
+  color: var(--ext-link-color);
+  text-decoration: none;
+}
+
+.ext-link:hover {
+  text-decoration: none;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 1px;
+  background-color: var(--bg-color-hover);
+  border-bottom: 1px solid var(--txt-title-color);
+}
+
+.int-link {
+  color: var(--int-link-color);
+}
+
+.download-link {
+  color: var(--download-link-color);
+}
+
+.bio {
+  display: none;
+  width: 100%;
+}
+
+#mail {
+  color: var(--int-link-color);
+  text-decoration: none;
+}
