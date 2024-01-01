@@ -30,6 +30,3 @@ function injectHTML(file, element) {
 
 // Inject HTML code into the footer
 injectHTML(TEMPLATES_PATH + "footer.html", "footer");
-
-// Update the copyright year in the footer          
-document.getElementsByClassName("footer-copyright")[0].innerHTML = "&copy; Stephan Gahima 2023 - " + new Date().getFullYear() + ". All rights reserved.";
