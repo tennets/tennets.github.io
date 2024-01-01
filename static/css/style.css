@@ -86,6 +86,22 @@ th {
   padding-left: var(--padding);
 }
 
+/* 
+ * This allows to inject the HTML in 'contact-info.html'
+ * to all page but 404.html.
+ *
+ * TODO:
+ * - Fix redundant code (identical to .sidebar)
+ */
+.sidebar-404 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+}
+
 .content {
   flex: 5;
   padding-top: var(--padding);
