@@ -16,13 +16,15 @@ const TEMPLATES_PATH = "/templates/";
  * @param {string} element - The element to inject the HTML into
  */
 function injectHTML(file, element) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200)
-            document.getElementById(element).innerHTML = this.responseText;
-    };
-    xhttp.open("GET", file, true);
-    xhttp.send();
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            const elem = document.querySelector(element);
+            elem.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error: ', error);
+        });
 }
 
 
