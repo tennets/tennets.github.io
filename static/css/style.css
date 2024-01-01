@@ -9,26 +9,23 @@
 
 
 :root {
+  /* Color palette */
+  --black: #222831;
+  --white: #f7f0f5;
+  --pink: #f72585;
+  --blue: #4361ee;
+  --light-blue: #4cc9f0;   
+
   /* Size */
   --page-width: 1000px;
   --page-max-height: 800px;
   --footer-max-height: 100px;
   --percent-height: 90%;
   --deg: 180deg;
+  --line-width-thin: 1px;
+  --line-width-thick: 5px;
 
-  /* Colors */
-  --bg-color: #3d3c41;
-  --bc-color-page-content: #1c1b22;
-  --bg-color-footer: #2c2b32;
-  --bg-color-hover: #213741;
-  --bg-color-key-concept: #3b3a41;
-
-  --txt-color-hover: #2f2f2f;
-  --txt-color: #f8f9fa;
-  --txt-title-color: #00ddff;
-  --int-link-color: #f368ec;
-  --ext-link-color: #4daafc;
-  --download-link-color: #46d429;
+  --transition-time: 0.3s;
 
   --font-sz-title: 1.2em;
   --font-sz-txt: 1em;
@@ -40,12 +37,12 @@
 body {
   width: var(--page-width);
   max-height: var(--page-max-height);
-  background-color: var(--bg-color);
+  background-color: var(--black);
+  color: var(--white);
   margin: auto;
   overflow: auto;
   font-family: 'Roboto', sans-serif;
   font-size: var(--font-sz-txt);
-  color: var(--txt-color);
 }
 
 footer {
@@ -56,7 +53,11 @@ footer {
   justify-content: space-evenly;
   padding-top: calc(2 * var(--padding));
   padding-bottom: var(--padding);
-  background-image: linear-gradient(var(--deg), var(--bg-color-footer), var(--bg-color));
+  border-top: var(--line-width-thin) solid var(--light-blue);
+}
+
+footer:hover {
+  border-top: var(--line-width-thin) solid var(--pink);
 }
 
 small {
@@ -74,7 +75,6 @@ th {
   display: flex;
   padding-top: var(--padding);
   padding-right: var(--padding);
-  background-color: var(--bc-color-page-content);
 }
 
 .sidebar {
@@ -115,45 +115,74 @@ th {
 
 .section-title
 {
-  color: var(--txt-title-color);
+  color: var(--light-blue);
 }
 
 .key-concepts {
-  background-color: var(--bg-color-key-concept);
   padding-top: var(--padding);
-  padding-left: var(--padding);
   padding-bottom: calc(.5 * var(--padding));
-  border: 1px solid var(--txt-title-color);
   text-align: left;
-  border-radius: 5px;
-}
-
-.key-concepts:hover {
-  background-color: var(--bg-color-hover);
 }
 
 .ext-link
 {
-  color: var(--ext-link-color);
+  color: var(--white);
+  border-bottom: calc(2 * var(--line-width-thin)) solid var(--blue);
+  width: 0%;
   text-decoration: none;
-}
 
-.ext-link:hover {
-  text-decoration: none;
-  padding-top: 2px;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-bottom: 1px;
-  background-color: var(--bg-color-hover);
-  border-bottom: 1px solid var(--txt-title-color);
+  transition: width var(--transition-time);
+  transition: color var(--transition-time);
+  transition: text-decoration var(--transition-time);
+  transition: background-color var(--transition-time);
+  transition: padding-left var(--transition-time);
+  transition: padding-right var(--transition-time);
 }
 
 .int-link {
-  color: var(--int-link-color);
+  color: var(--pink);
+  width: 0%;
+  text-decoration: none;
+
+  transition: width var(--transition-time);
+  transition: color var(--transition-time);
+  transition: text-decoration var(--transition-time);
+  transition: background-color var(--transition-time);
+  transition: padding-left var(--transition-time);
+  transition: padding-right var(--transition-time);
+}
+
+.ext-link:hover
+{
+  color: var(--black);
+  border-bottom: calc(2 * var(--line-width-thin)) solid var(--pink);
+  width: 100%;
+  text-decoration: none;
+
+  background-color: var(--light-blue);
+  padding-left: calc(.5 * var(--padding));
+  padding-right: calc(.5 * var(--padding));;
+}
+
+.int-link:hover {
+  color: var(--black);
+  border-bottom: calc(2 * var(--line-width-thin)) solid var(--blue);
+  width: 100%;
+  text-decoration: none;
+
+  background-color: var(--light-blue);
+  padding-left: calc(.5 * var(--padding));;
+  padding-right: calc(.5 * var(--padding));;
+}
+
+.ext-link,
+.int-link {
+  transition-timing-function: ease-in-out;
 }
 
 .download-link {
-  color: var(--download-link-color);
+  color: var(--pink);
+  text-decoration: none;
 }
 
 .bio {
@@ -162,6 +191,6 @@ th {
 }
 
 #mail {
-  color: var(--int-link-color);
+  color: var(--pink);
   text-decoration: none;
 }
