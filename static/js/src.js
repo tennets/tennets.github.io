@@ -6,7 +6,7 @@
 
 
 // Path to templates
-const TEMPLATES_PATH = "../../templates/";
+const TEMPLATES_PATH = "/templates/";
 
 
 /*
