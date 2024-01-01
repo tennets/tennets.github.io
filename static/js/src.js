@@ -28,13 +28,13 @@ function injectHTML(file, element, by) {
         .then(response => response.text())
         .then(data => {
             if (by == _CLASSNAME)
-                document.getElementsByClassName(element)[0].innerHTML = data;
+                document.getElementsByClassName(element)[0].innerHTML += data;
             else if (by == _ID)
-                document.getElementsById(element)[0].innerHTML = data;
+                document.getElementsById(element)[0].innerHTML += data;
             else if (by == _TAGNAME)
-                document.getElementsByTagName(element)[0].innerHTML = data;
+                document.getElementsByTagName(element)[0].innerHTML += data;
             else
-                document.querySelector(element).innerHTML = data;
+                document.querySelector(element).innerHTML += data;
         })
         .catch(error => {
             console.error('Error: ', error);
