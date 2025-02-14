@@ -6,7 +6,7 @@
 
 
 <small class="footer-copyright">
-    &copy; 2024 <a class="int-link" href="#" >Stephan Gahima</a>. All right reserved. | <a class="int-link" href="/privacy-policy.html">Privacy Policy</a>
+    &copy; <span id="footer-current-year"></span> <a class="int-link" href="#" >Stephan Gahima</a>. All right reserved. | <a class="int-link" href="/privacy-policy.html">Privacy Policy</a>
 </small>
 <small>
     Words I care about:
@@ -30,3 +30,7 @@
         peace
     </a>
 </small>
+
+<script>
+    document.getElementById("footer-current-year").textContent = new Date().getFullYear();
+</script>
