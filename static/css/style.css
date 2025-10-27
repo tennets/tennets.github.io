@@ -6,23 +6,15 @@
 
 
 :root {
-  /* Color palette */
   --black: #111213;
   --white: #d6d6d6;
   --pink: #f72585;
 
-  /* Size */
   --page-width: 1000px;
-  --page-max-height: 800px;
   --footer-max-height: 100px;
-  --percent-height: 90%;
   --deg: 180deg;
-  --line-width-thin: 1px;
-  --line-width-thick: 5px;
-
   --font-sz-title: 1.2em;
-  --font-sz-txt: 1em;
-
+  --font-sz-txt: 0.9em;
   --padding: 10px;
   --margin: 10px;
 }
@@ -34,7 +26,6 @@ html, body {
 
 body {
   width: var(--page-width);
-  max-height: var(--page-max-height);
   background-color: var(--black);
   color: var(--white);
   font-family:
@@ -57,7 +48,6 @@ footer {
   justify-content: space-evenly;
   padding-top: calc(2 * var(--padding));
   padding-bottom: var(--padding);
-  border-top: var(--line-width-thin) solid --black;
 }
 
 small {
@@ -71,7 +61,6 @@ th {
 
 .page-container {
   height: 90vh;
-  max-height: calc(var(--page-max-height) - var(--footer-max-height));
   display: flex;
   padding-top: var(--padding);
   padding-right: var(--padding);
@@ -99,7 +88,6 @@ th {
     justify-content: space-evenly;
     padding-top: var(--padding);
     padding-bottom: var(--padding);
-    border-top: var(--line-width-thin) solid --black;
   }
 }
 
