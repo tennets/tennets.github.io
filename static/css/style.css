@@ -7,8 +7,10 @@
 
 :root {
   /* Color palette */
-  --black: #000000;
+  --black: #111213;
+  --white: #d6d6d6;
   --pink: #f72585;
+  --green: #39FF14;
 
   /* Size */
   --page-width: 1000px;
@@ -18,8 +20,6 @@
   --deg: 180deg;
   --line-width-thin: 1px;
   --line-width-thick: 5px;
-
-  --transition-time: 0.3s;
 
   --font-sz-title: 1.2em;
   --font-sz-txt: 1em;
@@ -31,6 +31,10 @@
 body {
   width: var(--page-width);
   max-height: var(--page-max-height);
+  background-color: var(--bg-dark);
+  font-family:
+        "SF Mono", "SFMono-Regular", ui-monospace,
+        Menlo, Consolas, "Liberation Mono", monospace;
   margin: auto;
   overflow: auto;
   font-size: var(--font-sz-txt);
@@ -46,10 +50,6 @@ footer {
   padding-top: calc(2 * var(--padding));
   padding-bottom: var(--padding);
   border-top: var(--line-width-thin) solid --black;
-}
-
-footer:hover {
-  border-top: var(--line-width-thin) solid var(--pink);
 }
 
 small {
@@ -138,42 +138,14 @@ th {
 
 .ext-link
 {
+  color: var(--green);
   width: 0%;
   text-decoration: none;
-  transition: width var(--transition-time);
-  transition: color var(--transition-time);
-  transition: text-decoration var(--transition-time);
-  transition: background-color var(--transition-time);
-  transition: padding-left var(--transition-time);
-  transition: padding-right var(--transition-time);
 }
 
 .int-link {
   color: var(--pink);
   width: 0%;
-  text-decoration: none;
-  transition: width var(--transition-time);
-  transition: color var(--transition-time);
-  transition: text-decoration var(--transition-time);
-  transition: background-color var(--transition-time);
-  transition: padding-left var(--transition-time);
-  transition: padding-right var(--transition-time);
-}
-
-.ext-link:hover
-{
-  width: 100%;
-  text-decoration: none;
-  padding-left: calc(.5 * var(--padding));
-  padding-right: calc(.5 * var(--padding));;
-}
-
-.int-link:hover {
-  width: 100%;
-  text-decoration: none;
-
-  padding-left: calc(.5 * var(--padding));;
-  padding-right: calc(.5 * var(--padding));;
 }
 
 .download-link {
