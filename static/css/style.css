@@ -41,7 +41,7 @@ body {
 }
 
 footer {
-  height: 5vh;
+  height: 50px;
   max-height: var(--footer-max-height);
   display: flex;
   flex-direction: row;
