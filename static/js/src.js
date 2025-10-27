@@ -9,7 +9,6 @@ const currentYear = new Date().getFullYear();
 const templatesPath = "/templates/";
 const templates = [
     { file: "bio.html", selector: ".bio" },
-    { file: "contact-info.html", selector: ".sidebar" },
     { file: "footer.html", selector: "footer" },
     { file: "meta.html", selector: "head" }
 ];
