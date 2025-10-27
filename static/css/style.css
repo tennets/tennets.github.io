@@ -55,6 +55,7 @@ small {
 }
 
 th {
+  padding: 0 15px;
   text-align: center;
   font-size: var(--font-sz-title);
 }
