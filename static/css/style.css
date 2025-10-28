@@ -11,7 +11,6 @@
   --pink: #f72585;
 
   --page-width: 1000px;
-  --footer-max-height: 100px;
   --deg: 180deg;
   --font-sz-title: 1.2em;
   --font-sz-txt: 0.9em;
@@ -41,13 +40,13 @@ body {
 }
 
 footer {
-  height: 50px;
-  max-height: var(--footer-max-height);
+  height: 200px;
+  max-height: 500px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   padding-top: calc(2 * var(--padding));
-  padding-bottom: var(--padding);
+  padding-bottom: calc(2* var(--padding));
 }
 
 small {
